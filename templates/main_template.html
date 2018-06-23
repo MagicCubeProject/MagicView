@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Comfortaa">
+
+  <style>
+
+    body {
+      font-family: 'Comfortaa', serif;
+    }
+
+    .container{
+      width: 760px;
+    }
+
+    .cube{
+      display: grid;
+      grid-template-columns: repeat(4,auto);
+      grid-template-rows:  repeat(3, auto);
+      grid-gap: 10px;
+      background-color: #BEBEBE;
+      padding: 5px;
+      justify-items: center;
+    }
+
+    .facet{
+      display: grid;
+      grid-template-columns: repeat(3, 50px);
+      grid-template-rows: repeat(3, 50px);
+      grid-gap: 10px;
+      padding: 5px;
+    }
+
+    .cell{
+      line-height: 50px;
+      outline-style: solid;
+      background-color: #F5F5F5;
+      border: 1px solid rgba(0, 0, 0, 0.8);
+      font-size: 20px;
+      text-align: center;
+    }
+
+    .UP{
+      outline-color:#DDF52F;
+    }
+
+    .white{
+      outline-color:#E5E4E9;
+    }
+
+    .blue{
+      outline-color:#1784D5;
+    }
+
+    .LEFT{
+      outline-color:#FE621E;
+    }
+
+    .RIGHT{
+      outline-color:#B70811;
+    }
+
+    .FRONT{
+      outline-color:#1FDB48;
+    }
+
+    /*https://images-na.ssl-images-amazon.com/images/I/61T4XbK3LWL._SL1000_.jpg*/
+  </style>
+</head>
+<body>
+
+<h1>{{mcstr}}</h1>
+<div class="container">
+
+  <div class="cube">
+    <h1>Magic Cube</h1>
+    <div class="facet">
+      <div class="cell {{position.U.NORTH_EAST.value}}">{{position.U.NORTH_EAST.distance}}</div>
+            <div class="cell {{position.U.EAST.value}}">{{position.U.EAST.distance}}</div>
+                <div class="cell {{position.U.SOUTH_EAST.value}}">{{position.U.SOUTH_EAST.distance}}</div>
+      <div class="cell {{position.U.NORTH.value}}">{{position.U.NORTH.distance}}</div>
+            <div class="cell {{position.U.CENTER.value}}">U</div>
+                <div class="cell {{position.U.SOUTH.value}}">{{position.U.SOUTH.distance}}</div>
+      <div class="cell {{position.U.NORTH_WEST.value}}">{{position.U.NORTH_WEST.distance}}</div>
+        <div class="cell {{position.U.WEST.value}}">{{position.U.WEST.distance}}</div>
+            <div class="cell {{position.U.SOUTH_WEST.value}}">{{position.U.SOUTH_WEST.distance}}</div>
+    </div>
+    <div class="facet"></div>
+    <div class="facet"></div>
+
+    <div class="facet">
+      <div class="cell {{position.R.SOUTH_WEST.value}}">{{position.R.SOUTH_WEST.distance}}</div>
+            <div class="cell {{position.R.WEST.value}}">{{position.R.WEST.distance}}</div>
+                <div class="cell {{position.R.NORTH_WEST.value}}">{{position.R.NORTH_WEST.distance}}</div>
+      <div class="cell {{position.R.SOUTH.value}}">{{position.R.SOUTH.distance}}</div>
+            <div class="cell {{position.R.CENTER.value}}">R</div>
+                <div class="cell {{position.R.NORTH.value}}">{{position.R.NORTH.distance}}</div>
+      <div class="cell {{position.R.SOUTH_EAST.value}}">{{position.R.SOUTH_EAST.distance}}</div>
+            <div class="cell {{position.R.EAST.value}}">{{position.R.EAST.distance}}</div>
+                    <div class="cell {{position.R.NORTH_EAST.value}}">{{position.R.NORTH_EAST.distance}}</div>
+    </div>
+    <div class="facet">
+      <div class="cell {{position.F.NORTH_WEST.value}}">{{position.F.NORTH_WEST.distance}}</div>
+            <div class="cell {{position.F.NORTH.value}}">{{position.F.NORTH.distance}}</div>
+                <div class="cell {{position.F.NORTH_EAST.value}}">{{position.F.NORTH_EAST.distance}}</div>
+      <div class="cell {{position.F.WEST.value}}">{{position.F.WEST.distance}}</div>
+            <div class="cell {{position.F.CENTER.value}}">F</div>
+                <div class="cell {{position.F.EAST.value}}">{{position.F.EAST.distance}}</div>
+      <div class="cell {{position.F.SOUTH_WEST.value}}">{{position.F.SOUTH_WEST.distance}}</div>
+            <div class="cell {{position.F.SOUTH.value}}">{{position.F.SOUTH.distance}}</div>
+                <div class="cell {{position.F.SOUTH_EAST.value}}">{{position.F.SOUTH_EAST.distance}}</div>
+    </div>
+    <div class="facet">
+      <div class="cell {{position.L.SOUTH_WEST.value}}">{{position.L.SOUTH_WEST.distance}}</div>
+            <div class="cell orange">W</div>
+                <div class="cell {{position.L.NORTH_WEST.value}}">{{position.L.NORTH_WEST.distance}}</div>
+      <div class="cell orange">S</div>
+            <div class="cell orange">C</div>
+                <div class="cell orange">N</div>
+      <div class="cell orange">SE</div>
+            <div class="cell orange">E</div>
+                <div class="cell orange">NE</div>
+    </div>
+    <div class="facet">
+      <div class="cell blue">SE</div><div class="cell blue">S</div><div class="cell blue">SW</div>
+      <div class="cell blue">E</div><div class="cell blue">C</div><div class="cell blue">W</div>
+      <div class="cell blue">NE</div><div class="cell blue">N</div><div class="cell blue">NW</div>
+    </div>
+    <div class="facet"></div>
+    <div class="facet">
+      <div class="cell white">SW</div><div class="cell white">W</div><div class="cell white">NW</div>
+      <div class="cell white">S</div><div class="cell white">C</div><div class="cell white">N</div>
+      <div class="cell white">SE</div><div class="cell white">E</div><div class="cell white">NE</div>
+    </div>
+    <div class="facet"></div>
+    <div class="facet"></div>
+  </div>
+</div>
+</body>
+</html>

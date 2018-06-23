@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Comfortaa">
+
+  <style>
+
+    body {
+      font-family: 'Comfortaa', serif;
+    }
+
+    .container{
+      width: 760px;
+    }
+
+    .cube{
+      display: grid;
+      grid-template-columns: repeat(4,auto);
+      grid-template-rows:  repeat(3, auto);
+      grid-gap: 10px;
+      background-color: #BEBEBE;
+      padding: 5px;
+      justify-items: center;
+    }
+
+    .facet{
+      display: grid;
+      grid-template-columns: repeat(3, 50px);
+      grid-template-rows: repeat(3, 50px);
+      grid-gap: 10px;
+      padding: 5px;
+    }
+
+    .cell{
+      line-height: 50px;
+      outline-style: solid;
+      background-color: #F5F5F5;
+      border: 1px solid rgba(0, 0, 0, 0.8);
+      font-size: 20px;
+      text-align: center;
+    }
+
+    .yellow{
+      outline-color:#DDF52F;
+    }
+
+    .white{
+      outline-color:#E5E4E9;
+    }
+
+    .blue{
+      outline-color:#1784D5;
+    }
+
+    .orange{
+      outline-color:#FE621E;
+    }
+
+    .red{
+      outline-color:#B70811;
+    }
+
+    .green{
+      outline-color:#1FDB48;
+    }
+
+    /*https://images-na.ssl-images-amazon.com/images/I/61T4XbK3LWL._SL1000_.jpg*/
+  </style>
+</head>
+<body>
+
+<div class="container">
+
+  <div class="cube">
+    <h1>Magic Cube</h1>
+    <div class="facet">
+      <div class="cell yellow">NE</div><div class="cell yellow">E</div><div class="cell yellow">SE</div>
+      <div class="cell yellow">N</div><div class="cell yellow">C</div><div class="cell yellow">S</div>
+      <div class="cell yellow">NW</div><div class="cell yellow">W</div><div class="cell yellow">SW</div>
+    </div>
+    <div class="facet"></div>
+    <div class="facet"></div>
+
+    <div class="facet">
+      <div class="cell red">SW</div><div class="cell red">W</div><div class="cell red">NW</div>
+      <div class="cell red">S</div><div class="cell red">&#9786</div><div class="cell red">N</div>
+      <div class="cell red">SE</div><div class="cell red">E</div><div class="cell red">NE</div>
+    </div>
+    <div class="facet">
+      <div class="cell green">NW</div><div class="cell green">N</div><div class="cell green">NE</div>
+      <div class="cell green">W</div><div class="cell green">C</div><div class="cell green">E</div>
+      <div class="cell green">SW</div><div class="cell green">S</div><div class="cell green">SE</div>
+    </div>
+    <div class="facet">
+      <div class="cell orange">SW</div><div class="cell orange">W</div><div class="cell orange">NW</div>
+      <div class="cell orange">S</div><div class="cell orange">C</div><div class="cell orange">N</div>
+      <div class="cell orange">SE</div><div class="cell orange">E</div><div class="cell orange">NE</div>
+    </div>
+    <div class="facet">
+      <div class="cell blue">SE</div><div class="cell blue">S</div><div class="cell blue">SW</div>
+      <div class="cell blue">E</div><div class="cell blue">C</div><div class="cell blue">W</div>
+      <div class="cell blue">NE</div><div class="cell blue">N</div><div class="cell blue">NW</div>
+    </div>
+    <div class="facet"></div>
+    <div class="facet">
+      <div class="cell white">SW</div><div class="cell white">W</div><div class="cell white">NW</div>
+      <div class="cell white">S</div><div class="cell white">C</div><div class="cell white">N</div>
+      <div class="cell white">SE</div><div class="cell white">E</div><div class="cell white">NE</div>
+    </div>
+    <div class="facet"></div>
+    <div class="facet"></div>
+  </div>
+</div>
+</body>
+</html>

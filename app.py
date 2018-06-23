@@ -33,7 +33,7 @@ def show_position(position_code=None):
         mc = MagicCube()
     else:
         mc = MagicCube(position_code)
-    mc.rotate(Facet.FRONT,True)
+    mc.rotate(Facet.LEFT,True)
     position=getMagicCubeDict(mc)
     mcstr = str(mc)
     return render_template('main_template.html', mcstr = mcstr, position=position)

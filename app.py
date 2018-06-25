@@ -29,11 +29,13 @@ def getMagicCubeDict(magicCube:MagicCube):
 @app.route("/position/")
 @app.route("/position/<position_code>")
 def show_position(position_code=None):
-    if position_code is None or len(position_code) is not 54:
+    if position_code is None:
         mc = MagicCube()
     else:
         mc = MagicCube(position_code)
-    mc.rotate(Facet.LEFT,True)
+    # mc.rotate(Facet.BACK)
+    # mc.rotate(Facet.BACK)
+
     position=getMagicCubeDict(mc)
     mcstr = str(mc)
     return render_template('main_template.html', mcstr = mcstr, position=position)

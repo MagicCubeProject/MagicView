@@ -53,11 +53,11 @@
       outline-color:#1784D5;
     }
 
-    .LEFT{
+    .RIGHT{
       outline-color:#FE621E;
     }
 
-    .RIGHT{
+    .LEFT{
       outline-color:#B70811;
     }
 
@@ -70,7 +70,7 @@
 </head>
 <body>
 
-<h1>{{mcstr}}</h1>
+<h2>{{mcstr}}</h2>
 <div class="container">
 
   <div class="cube">
@@ -89,16 +89,17 @@
     <div class="facet"></div>
     <div class="facet"></div>
 
-    <div class="facet">
-      <div class="cell {{position.R.SOUTH_WEST.value}}">{{position.R.SOUTH_WEST.distance}}</div>
-            <div class="cell {{position.R.WEST.value}}">{{position.R.WEST.distance}}</div>
-                <div class="cell {{position.R.NORTH_WEST.value}}">{{position.R.NORTH_WEST.distance}}</div>
-      <div class="cell {{position.R.SOUTH.value}}">{{position.R.SOUTH.distance}}</div>
-            <div class="cell {{position.R.CENTER.value}}">R</div>
-                <div class="cell {{position.R.NORTH.value}}">{{position.R.NORTH.distance}}</div>
-      <div class="cell {{position.R.SOUTH_EAST.value}}">{{position.R.SOUTH_EAST.distance}}</div>
-            <div class="cell {{position.R.EAST.value}}">{{position.R.EAST.distance}}</div>
-                    <div class="cell {{position.R.NORTH_EAST.value}}">{{position.R.NORTH_EAST.distance}}</div>
+
+      <div class="facet">
+      <div class="cell {{position.L.SOUTH_WEST.value}}">{{position.L.SOUTH_WEST.distance}}</div>
+            <div class="cell {{position.L.WEST.value}}">{{position.L.WEST.distance}}</div>
+                <div class="cell {{position.L.NORTH_WEST.value}}">{{position.L.NORTH_WEST.distance}}</div>
+      <div class="cell {{position.L.SOUTH.value}}">{{position.L.SOUTH.distance}}</div>
+            <div class="cell {{position.L.CENTER.value}}">L</div>
+                <div class="cell {{position.L.NORTH.value}}">{{position.L.NORTH.distance}}</div>
+      <div class="cell {{position.L.SOUTH_EAST.value}}">{{position.L.SOUTH_EAST.distance}}</div>
+            <div class="cell {{position.L.EAST.value}}">{{position.L.EAST.distance}}</div>
+                <div class="cell {{position.L.NORTH_EAST.value}}">{{position.L.NORTH_EAST.distance}}</div>
     </div>
     <div class="facet">
       <div class="cell {{position.F.NORTH_WEST.value}}">{{position.F.NORTH_WEST.distance}}</div>
@@ -111,16 +112,16 @@
             <div class="cell {{position.F.SOUTH.value}}">{{position.F.SOUTH.distance}}</div>
                 <div class="cell {{position.F.SOUTH_EAST.value}}">{{position.F.SOUTH_EAST.distance}}</div>
     </div>
-    <div class="facet">
-      <div class="cell {{position.L.SOUTH_WEST.value}}">{{position.L.SOUTH_WEST.distance}}</div>
-            <div class="cell {{position.L.WEST.value}}">{{position.L.WEST.distance}}</div>
-                <div class="cell {{position.L.NORTH_WEST.value}}">{{position.L.NORTH_WEST.distance}}</div>
-      <div class="cell {{position.L.SOUTH.value}}">{{position.L.SOUTH.distance}}</div>
-            <div class="cell {{position.L.CENTER.value}}">L</div>
-                <div class="cell {{position.L.NORTH.value}}">{{position.L.NORTH.distance}}</div>
-      <div class="cell {{position.L.SOUTH_EAST.value}}">{{position.L.SOUTH_EAST.distance}}</div>
-            <div class="cell {{position.L.EAST.value}}">{{position.L.EAST.distance}}</div>
-                <div class="cell {{position.L.NORTH_EAST.value}}">{{position.L.NORTH_EAST.distance}}</div>
+          <div class="facet">
+      <div class="cell {{position.R.SOUTH_WEST.value}}">{{position.R.SOUTH_WEST.distance}}</div>
+            <div class="cell {{position.R.WEST.value}}">{{position.R.WEST.distance}}</div>
+                <div class="cell {{position.R.NORTH_WEST.value}}">{{position.R.NORTH_WEST.distance}}</div>
+      <div class="cell {{position.R.SOUTH.value}}">{{position.R.SOUTH.distance}}</div>
+            <div class="cell {{position.R.CENTER.value}}">R</div>
+                <div class="cell {{position.R.NORTH.value}}">{{position.R.NORTH.distance}}</div>
+      <div class="cell {{position.R.SOUTH_EAST.value}}">{{position.R.SOUTH_EAST.distance}}</div>
+            <div class="cell {{position.R.EAST.value}}">{{position.R.EAST.distance}}</div>
+                    <div class="cell {{position.R.NORTH_EAST.value}}">{{position.R.NORTH_EAST.distance}}</div>
     </div>
     <div class="facet">
       <div class="cell {{position.B.SOUTH_EAST.value}}">{{position.B.SOUTH_EAST.distance}}</div>
